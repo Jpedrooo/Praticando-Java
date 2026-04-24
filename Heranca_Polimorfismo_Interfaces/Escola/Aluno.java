@@ -1,17 +1,18 @@
 
 package Heranca_Polimorfismo_Interfaces.Escola;
 
- public class Aluno {
-    private String nome;
-    private String tipo;
+ public class Aluno extends Pessoa{
+    protected Double nota;
+    protected String tipo;
     
-    public Aluno(String nome, String tipo) {
-        this.nome = nome;
+    public Aluno(String nome, int idade, Double nota, String tipo) {
+        super(nome, idade);
+        this.nota = nota;
         this.tipo = tipo;
     }
 
     public void identificador(){
-        System.out.printf("Aluno: %s - Tipo: %s", nome, tipo);
+        System.out.printf("Nome: %s - Idade: %s - Nota: %.2f", nome, idade, nota);
     }
 
 }
